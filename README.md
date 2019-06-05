@@ -1,4 +1,4 @@
-look-and-say Algorithm
+look-and-say Algorithm (Conway Sequence)
 Definition
 The look-and-say sequence is such a sequence that for creating each term of this sequence you have to read a number alphabetically and then write that alphabetic readings numerically. You can take any number as a starting number, and then follow this rule to produce next numbers.
 
