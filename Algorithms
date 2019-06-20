@@ -1,38 +1,14 @@
 1: Given a string, e.g. foobar, you want to get the list of all suffixes of said string, e.g. ["r", "ar", "bar", "obar", "oobar", "foobar"]
 
-package com.bhasker.dgstack;
+Output: 
 
-import java.util.ArrayList;
-import java.util.List;
+Enter a string > 
+8472814
+Given a string 8472814
+[8472814, 472814, 72814, 2814, 814, 14, 4]
 
-public class Main {
+Process finished with exit code 0
 
-private static  String str="Pankaj";
-
-
-    public static void main(String[] args) {
-
-        if(str!=null && str.length()>0){
-            List<String> list =new ArrayList<String>();
-            // write your code here
-            for ( int i =0 ;i< str.length(); i ++) {
-
-                String s = str.substring(i, str.length());
-
-                list.add(s);
-
-            }
-            System.out.println("Given a string " + str);
-
-            System.out.println(list);
-        }
-        else
-            System.out.println("Given a string  Null or Empty");
-
-    }
-}
-
-==============================================================================================================================
 2. look-and-say Algorithm (Conway Sequence)
 
 Definition The look-and-say sequence is such a sequence that for creating each term of this sequence you have to read a number alphabetically and then write that alphabetic readings numerically. You can take any number as a starting number, and then follow this rule to produce next numbers.
@@ -52,52 +28,6 @@ The idea of the look-and-say sequence is similar to that of run-length encoding.
 If started with any digit d from 0 to 9 then d will remain indefinitely as the last digit of the sequence. For d different from 1, the sequence starts as follows:
 
 d, 1d, 111d, 311d, 13211d, 111312211d, 31131122211d, … Ilan Vardi has called this sequence, starting with d = 3, the Conway sequence (sequence A006715 in the OEIS). (for d = 2, see OEIS: A006751)[2]
-
-
-package com.bhasker.dgstack;
-
-
-import java.util.Scanner;
-
-public class LookAndSay {
-
-    public static String lookandsay(String number){
-        StringBuilder result= new StringBuilder();
-
-        char repeat= number.charAt(0);
-        number= number.substring(1) + " ";
-        int times= 1;
-
-        for(char actual: number.toCharArray()){
-            if(actual != repeat){
-                result.append(times + "" + repeat);
-                times= 1;
-                repeat= actual;
-            }else{
-                times+= 1;
-            }
-        }
-        return result.toString();
-    }
-
-    public static void main(String[] args){
-
-        System.out.println("Enter the Input Value > ");
-        Scanner inputString  = new Scanner(System.in);
-        String num= inputString.nextLine();
-        System.out.println("Enter the Number of Interation Value > ");
-        Scanner inputItr= new Scanner(System.in);
-        int iteration = inputItr.nextInt();
-        StringBuilder sb= new StringBuilder("");
-        for (int i=1;i<=iteration;i++) {
-            System.out.println(num);
-            num = lookandsay(num);
-            sb.append(num +  " ");
-        }
-        System.out.println(sb);
-    }
-
-}
 
 Output:
 
