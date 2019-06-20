@@ -1,54 +1,36 @@
 package com.bhasker.dgstack;
 
-
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
-public class LookAndSay {
+public class SuffixWord {
 
-    public static String lookandsay(String number){
-        StringBuilder result= new StringBuilder();
+private static  String str="";
 
-        char repeat= number.charAt(0);
-        number= number.substring(1) + " ";
-        int times= 1;
 
-        for(char actual: number.toCharArray()){
-            if(actual != repeat){
-                result.append(times + "" + repeat);
-                times= 1;
-                repeat= actual;
-            }else{
-                times+= 1;
+    public static void main(String[] args) {
+
+        System.out.println("Enter a string > ");
+        Scanner input = new Scanner(System.in);
+        str = input.nextLine();
+
+        if(str!=null && str.length()>0){
+            List<String> list =new ArrayList<String>();
+            // write your code here
+            for ( int i =0 ;i< str.length(); i ++) {
+
+                String s = str.substring(i, str.length());
+
+                list.add(s);
+
             }
+            System.out.println("Given a string " + str);
+
+            System.out.println(list);
         }
-        return result.toString();
+        else
+            System.out.println("Given a string  Null or Empty");
+
     }
-
-    public static void main(String[] args){
-
-        System.out.println("Enter the Input Value > ");
-        Scanner inputString  = new Scanner(System.in);
-        String num= inputString.nextLine();
-        System.out.println("Enter the Number of Interation Value > ");
-        Scanner inputItr= new Scanner(System.in);
-        int iteration = inputItr.nextInt();
-        StringBuilder sb= new StringBuilder("");
-        for (int i=1;i<=iteration;i++) {
-            System.out.println(num);
-            num = lookandsay(num);
-            sb.append(num +  " ");
-        }
-        System.out.println(sb);
-    }
-
 }
-
-/**
- Output
- 11
- 21
- 1211
- 111221
- 312211
-
- */
