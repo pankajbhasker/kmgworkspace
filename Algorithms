@@ -1,0 +1,1 @@
+1: Given a string, e.g. foobar, you want to get the list of all suffixes of said string, e.g. ["r", "ar", "bar", "obar", "oobar", "foobar"]
