@@ -2,13 +2,18 @@ package com.bhasker.dgstack;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class SuffixWord {
 
-private static  String str="Pankaj";
+private static  String str="";
 
 
     public static void main(String[] args) {
+
+        System.out.println("Enter a string > ");
+        Scanner input = new Scanner(System.in);
+        str = input.nextLine();
 
         if(str!=null && str.length()>0){
             List<String> list =new ArrayList<String>();
