@@ -1,5 +1,5 @@
 package com.bhasker.dgstack.coreprg;
-public class triangledemo {
+public class TriangleDemo {
 
 	public static void main(String[] args) {
 		int i, j, k;
