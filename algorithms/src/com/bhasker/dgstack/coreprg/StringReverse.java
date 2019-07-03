@@ -1,7 +1,7 @@
 package com.bhasker.dgstack.coreprg;
 import java.util.Scanner;
 
-public class stringreverse {
+public class StringReverse {
 	public static void main(String[] args) {
 
 		String rev = " ";
