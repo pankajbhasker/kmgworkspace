@@ -1,5 +1,5 @@
 package com.bhasker.dgstack.coreprg;
-public class stringdemo {
+public class StringDemo {
 
 	public static void main(String[] args) {
 
