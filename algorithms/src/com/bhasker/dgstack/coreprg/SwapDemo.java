@@ -1,5 +1,5 @@
 package com.bhasker.dgstack.coreprg;
-public class swapdemo {
+public class SwapDemo {
 
 	public static void main(String[] args) {
 		/*
