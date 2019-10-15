@@ -43,3 +43,14 @@ Enter the Number of Interation Value >
 21 1211 111221 312211 13112221 
 
 Process finished with exit code 0
+
+3. write a function which takes input as char array and reverse the words like below.
+
+functionName: public char[] reverseWords(char[] message)
+
+Input : char[] message = {'g','o','o','d',' ','t','h','i','n','g','s',' ','t','a','k',’e’,’ ’,’t’,’i’,'m','e'} 
+
+Output: message =  { ‘t’,’i’,’m',’e’,’ ’,’t’,'a‘,’k’,’e’,’ ‘,'t','h','i','n','g','s',’ ‘,'g','o','o','d'}
+
+Time Complexity = O(n)  and Space Complexity= O(1)  
+
