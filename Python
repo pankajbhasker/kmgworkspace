@@ -1,0 +1,124 @@
+Problem 1:
+ a=[1,2,3,4,5,6,7,8,9]
+sum=9
+find all the pairs where sum =9
+example:(1,8),(2,7)
+but if 1,8 came then we dont need to print (8,1)
+aur agar 1,1  do baar ho to? : ids should be unique.
+By Tanmoy
+
+Solution1  by Shammi bhai:
+  Public void printPairs(int[] a, int expectedNumber)
+for(int i = 0, j=a.length; i < a.length/2; i++, j-- ) {
+   while(a[i] + a [j] > expectedNumber){
+        j--;
+    }
+  System.out.println(a[i] + ", " + a [j])
+}
+
+
+
+Solution 1: By Dattaraj
+N x N
+1.assumption: list is sorted / 1st sort the list.
+L=[1,2,3,4,5,6,7,8,9]
+
+Def Sum_of_tupple(L, expected_sum):
+	op=[ ]
+	For i, index_of_i enumerate( L):
+		If i > expected_sum or L[index_of_i] ==L[-1] :
+			Return op
+		Else:
+			If L[index_of_i +1] > expected_sum:
+				break
+			For j in L[index_of_i+1:] :
+				If i + j	== expected_sum:
+					Op.append( (i,j) )
+Return op			
+
+2. Another approach with  nlogn
+Sol:
+Generate hash for given array:
+
+⇒ create hashmap for array, 
+=> loop from i to n on Array (one can optimize loop using conditions)
+=> check sum - i  in hashmap ⇒ if yes print pair 
+
+======================================%%%%%%=========================
+
+
+Solution 2:
+By Tanmay  with n*n
+def SumOfPairs2(arr, su):
+   for i in range(len(arr)):
+       for j in range(i+1,len(arr)):
+           if arr[i]+arr[j]==su:
+               print("(", arr[i],", ",arr[j], ")")
+   return
+
+Solution with nlogn:
+def SumOfPairs(arr, su):
+   arr.sort()
+   low=0
+   high=len(arr)-1
+   while (high>low):
+       if arr[low]+arr[high]==su:
+           print("(", arr[low],", ",arr[high], ")")
+       if arr[low]+arr[high]>su:
+           high-=1
+       else:
+           low+=1
+   return
+================================%%%%%%===============================
+
+
+Problem2:
+
+It is similar to the 1st one, search pair of (a,b), where a + b = c and a,b,c ∈  Array L.
+
+Solution with n*n*n
+def SumOfPairs2(arr, su):
+   for i in range(len(arr)):
+       for j in range(i+1,len(arr)):
+           if arr[i]+arr[j]==su and su in arr:
+               print("(", arr[i],", ",arr[j], ")")
+   return
+
+Solution with n*n
+def SumOfPairs(arr, su):
+   arr.sort()
+   low=0
+   high=len(arr)-1
+   while (high>low):
+       if arr[low]+arr[high]==su and su in arr:
+           print("(", arr[low],", ",arr[high], ")")
+       if arr[low]+arr[high]>su:
+           high-=1
+       else:
+           low+=1
+   return
+
+
+Problem 3:
+
+Given an array with both positive and negative numbers, Find two elements such that their sum is closest to zero.
+
+
+
+
+
+Problem 4:
+
+Find any pick in the given Array, Where A[i-1] < A[i] < A[i+1]. 
+Try to optimise solution < O(n). 
+
+Solution with O(n) will come. Not sure about <O(n)
+
+Solution with O(n):
+
+def find_pick(a):
+    for i in range(1,len(arr)-1):
+        if a[i-1]<a[i]<a[i+1]:
+            print(a[i-1], a[i], a[i+1])
+    return
+
