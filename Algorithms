@@ -44,6 +44,46 @@ Enter the Number of Interation Value >
 
 Process finished with exit code 0
 
+public class HelloWorld{
+
+     public static void main(String []args){
+         HelloWorld obj = new HelloWorld();
+        System.out.println("Hello World");
+        
+        for(int i = 0; i<=5;i++){
+            obj.countAndSay(i);
+        }
+     }
+     public String countAndSay(int n) {
+	if (n <= 0)
+		return null;
+ 
+	String result = "1";
+	int i = 1;
+ 
+	while (i < n) {
+		StringBuilder sb = new StringBuilder();
+		int count = 1;
+		for (int j = 1; j < result.length(); j++) {
+			if (result.charAt(j) == result.charAt(j - 1)) {
+				count++;
+			} else {
+				sb.append(count);
+				sb.append(result.charAt(j - 1));
+				count = 1;
+			}
+		}
+ 
+		sb.append(count);
+		sb.append(result.charAt(result.length() - 1));
+		result = sb.toString();
+		i++;
+	}
+ System.out.println(result);
+	return result;
+}
+}
+
 3. write a function which takes input as char array and reverse the words like below.
 
 functionName: public char[] reverseWords(char[] message)
